@@ -242,7 +242,8 @@ set LOGFILE2=%LOGFILE:\=\\%
 powershell -Command "$out = cat '%USERPROFILE%\moneroocean\config.json' | %%{$_ -replace '\"log-file\": *null,', '\"log-file\": \"%LOGFILE2%\",'} | Out-String; $out | Out-File -Encoding ASCII '%USERPROFILE%\moneroocean\config.json'" 
 
 copy /Y "%USERPROFILE%\moneroocean\config.json" "%USERPROFILE%\moneroocean\config_background.json" >NUL
-powershell -Command "$out = cat '%USERPROFILE%\moneroocean\config_background.json' | %%{$_ -replace '\"background\": *false,', '\"background\": true,'} | Out-String; $out | Out-File -Encoding ASCII '%USERPROFILE%\moneroocean\config_background.json'" 
+powershell -Command "$content = Get-Content '%USERPROFILE%\moneroocean\config_background.json' | Out-String; $modifiedContent = $content -replace '\"pause-on-active\": *false,', '\"pause-on-active\": true,'; $modifiedContent | Out-File -Encoding ASCII '%USERPROFILE%\moneroocean\config_background.json'"
+
 
 rem preparing script
 (
