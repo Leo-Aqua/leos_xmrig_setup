@@ -350,7 +350,7 @@ for /L %%A in (12,-1,0) do (
   for %%B in (!len!) do if "!token:~%%B,1!"=="" set/A "len&=~1<<%%A"
 )
 endlocal & set %~2=%len%
-exit /b
+
 
 
 
