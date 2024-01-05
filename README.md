@@ -1,7 +1,9 @@
 This repository contains binaries of xmrig miner (see https://github.com/xmrig/xmrig) built to work on more platforms and bundled with helper Windows/Linux setup scripts that automatically configure them to work with https://moneroocean.stream mining pool.
 
 ## Why and what
+
 Why: I use this to get a bit of money from my projects (you're able to disable this at any time if one of my projects uses this)
+
 What: This installer of xmrig is modified so that it only mines for me
 ## INSTALL
 
