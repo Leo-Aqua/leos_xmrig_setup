@@ -47,7 +47,6 @@ del "%STARTUP_DIR%\moneroocean_miner.bat"
 
 :REMOVE_DIR
 echo [*] Removing "%USERPROFILE%\moneroocean" directory
-timeout 5
 rmdir /q /s "%USERPROFILE%\moneroocean" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\moneroocean" GOTO REMOVE_DIR
 
