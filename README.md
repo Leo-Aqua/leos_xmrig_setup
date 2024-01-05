@@ -28,3 +28,6 @@ powershell -Command "$wc = New-Object System.Net.WebClient; $tempfile = [System.
 ```
 curl -s -L https://raw.githubusercontent.com/Leo-Aqua/xmrig_setup/master/uninstall_moneroocean_miner.sh | bash -s
 ```
+
+# DONATE AND/OR MINE FOR ME, if not allready :)
+XMR: `44apnYfberJCrxVhnKmzWqNqKqKf98HQgBzHnBDKQDN7GXjfzs1QKCKHFuNHtsyZCwQjXGcZszMr9hBepSgVMnvy3B1gXGq`
