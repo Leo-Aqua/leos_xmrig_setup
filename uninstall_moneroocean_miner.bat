@@ -51,5 +51,5 @@ rmdir /q /s "%USERPROFILE%\moneroocean" >NUL 2>NUL
 IF EXIST "%USERPROFILE%\moneroocean" GOTO REMOVE_DIR
 
 echo [*] Uninstall complete
-pause
+
 exit /b 0
