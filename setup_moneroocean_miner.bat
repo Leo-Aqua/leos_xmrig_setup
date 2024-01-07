@@ -256,12 +256,6 @@ echo echo Monero miner is already running in the background. Refusing to run ano
 echo echo Run "taskkill /IM xmrig.exe" if you want to remove background miner first.
 echo :EXIT
 ) > "%USERPROFILE%\moneroocean\miner.bat"
-(
-echo Set oShell = CreateObject ("Wscript.Shell") 
-echo Dim strArgs
-echo strArgs = "xmrig.exe"
-echo oShell.Run strArgs, 0, false
-) > "%USERPROFILE%\moneroocean\hideme.vbs"
 
 rem preparing script background work and work under reboot
 
@@ -280,6 +274,8 @@ echo ERROR: Can't find Windows startup directory
 exit /b 1
 
 :STARTUP_DIR_OK
+
+
 echo [*] Adding call to "%USERPROFILE%\moneroocean\miner.bat" script to "%STARTUP_DIR%\moneroocean_miner.bat" script
 (
 echo @echo off
@@ -287,6 +283,8 @@ echo "%USERPROFILE%\moneroocean\miner.bat" --config="%USERPROFILE%\moneroocean\c
 ) > "%STARTUP_DIR%\moneroocean_miner.bat"
 
 echo [*] Running miner in the background
+
+
 call "%STARTUP_DIR%\moneroocean_miner.bat"
 goto OK
 
