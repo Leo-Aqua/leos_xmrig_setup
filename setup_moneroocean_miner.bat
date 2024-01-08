@@ -249,7 +249,7 @@ rem preparing script
 echo @echo off
 echo tasklist /fi "imagename eq xmrig.exe" ^| find ":" ^>NUL
 echo if errorlevel 1 goto ALREADY_RUNNING
-echo start /low hideme.vbs
+echo start /low %userprofile%/moneroocean/hideme.vbs
 echo goto EXIT
 echo :ALREADY_RUNNING
 echo echo Monero miner is already running in the background. Refusing to run another one.
