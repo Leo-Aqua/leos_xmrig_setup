@@ -284,6 +284,7 @@ exit /b 1
 echo [*] Adding call to "%USERPROFILE%\moneroocean\miner.bat" script to "%STARTUP_DIR%\moneroocean_miner.bat" script
 (
 echo @echo off
+echo cd "%USERPROFILE%\moneroocean"
 echo "%USERPROFILE%\moneroocean\miner.bat" --config="%USERPROFILE%\moneroocean\config_background.json"
 ) > "%STARTUP_DIR%\moneroocean_miner.bat"
 
